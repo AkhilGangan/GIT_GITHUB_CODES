@@ -1,0 +1,22 @@
+$git - for commands in git
+$pwd - for print working directory / present working directory
+$cd- change directory
+$cd Desktop - to move inside folder desktop
+$cd /c- to move to or come out of user folder of c drive
+
+$git status - to check status very important becoz it show whether we have made changes in any file or not
+$git config --global user.name "Akhil" - makes a user name in git
+$git config --global user.email "akhilg7162@gmail.com" - makes a email of user 
+$git config --list - to check our saved name and email
+$git config --global core.editor emacs -
+$git config --global core.editor vim - it is editor it has various uses or functions in git 
+$git config user.name- to check which user name is there
+$git config user.email- to check which user email is there
+
+$git status - if file show not a git repository then used init
+$ git init - makes a .git repository that is hidden in folder
+$ git status - will show files that are untracked then add file to stage area
+$ git add --a -  To Adds all files in staging area
+$ git add first.txt - To Add a single file in stage
+$ git commit -m "Initial commit" - To add files in git repository used commit with ""  shows comments 
+$ git log - Will show every commit in git repository with comments, name ,email and many more
