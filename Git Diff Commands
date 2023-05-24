@@ -1,0 +1,13 @@
+USES - 1:CHECK DIFFERENCE BETWEEN WORKING DIRECTORY AND STAGING AREA 
+2:ALSO LAST COMMIT AND STAGING AREA
+$ git status - modified files will show gitignore static
+$ git add . - staging
+$ git status - staging area now
+NOW MODDIFYING IN TEXT FILE
+$ git status - 2 things will show staging area and working file
+$ git diff - WILL SHOW DIFFERENCE BETWEEN STAGING AREA AND WORKING DIRECTORY
+$ git add . - staging
+$ git diff - WILL SHOW NOTHING BECOZ IT IS STAGE NOW
+$ git status - staged
+$ git diff --staged - WILL SHOW DIFFERENCE BETWEEN LAST COMMIT AND STAGING AREA
+$ git status - staged file modified
