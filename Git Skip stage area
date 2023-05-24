@@ -1,0 +1,16 @@
+<--SKIPPING STAGING AREA-->
+$ git status- staged modified
+$ git commit -m "good commit"- for commiting staged files
+$ git status - nothing to commit clean
+SUPPOSE A CHANGE IS MADE IN FIRST.TXT FILE
+$ git status - changes not staged
+NOW SUPPOSE ADDING A NEW FILE 'second.txt' 
+$ git status - one change file and one untracked file shown here
+FOR SKIPPING STAGING AREA 
+$ git commit -a -m "Direct commit" - direct commit
+$ git status - now only untracked file shows and other changed file is committed
+IN MOST OF CASES WE WILL NOT DIRECT COMMIT TO TRACK THE FILE WE NEED FIRST TO STAGED THEM
+$ git add second.txt -
+$ git commit -a -m "added second.txt"-
+$ git status - clean
+$ git log - all commits will be shown here
