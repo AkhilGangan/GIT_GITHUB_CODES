@@ -1,0 +1,42 @@
+<--------REMOVING,RENAMING,UNTRACKING -------->
+$ git status- clean nothing to commit
+SUPPOSE RENAMING SECOND.TXT *SHORTCUT CLICK F2 AND SELECT FILE TO THIRD.TXT
+$ git status - deleted second and added third will show untracked
+$ git add . -
+$ git status -will show you renamed second to third after staging 
+$ git commit -m "renamed 2nd to 3rd" - commiting
+IF I WANT TO REMOVE OR RENAME A FILE USING GIT THAN WE WILL USED 
+SUPPOSE DELETING 3RD.TXT FROM FOLDER
+$ git status - deleted 3rd.txt
+I CAN COMMIT HERE BUT WE WILL NOT DO THAT WE BRING FILE AGAIN USING UNDO
+$ git status - clean
+
+*REMOVING OR DELETING FILES
+**$ git rm third.txt - 3rd.txt has been removed or deleted from folder now
+$ git status - IT HAS ALSO STAGED IT 
+$ git commit  -m "Removed bad file 3rd.txt"-  commiting
+
+*RENAMING FILES
+IF I WANT TO RENAME FIRST INTO FIRST_RENAMED.TXT
+mv - MOVE means renamed 
+$ git mv first.txt first_renamed.txt - after enter the file has been renamed 
+$ git status - it is staged will show to commit it 
+$ git commit  -m "renamed first.txt" - commiting file
+
+*UNTRACKING
+$ git status - clean 
+IN .GITIGNORE SUPPOSE I WANT TO IGNORE db.accdb FILE THEN I ADDED IT IN .GITIGNORE FILE
+$ git status - modified.gitignore
+$ git add . - staging  
+$ git commit -m "changed gitignore" - commiting
+SUPPOSE I MADE A CHANGE IN db.accdb FILE THEN SEE
+$ git status - modified db.accdb 
+BECOZ IT IS ALREADY TRACKING FILE BEFORE ADDING TO .GITIGNORE SO WE HAVE TO UNTRACKED IT FOR THAT 
+$ git rm --cached db.accdb - will not remove but stop tracking file means untracked the file now 
+$ git status - deleted db.accdb but it is still there not deleted we have untracked it 
+$ git commit -m "removed db.accdb" -
+$ git status- clean
+SUPPOSE I MADE CHANGE IN db.accdb
+$ git status - clean
+SUPPOSE I REMOVED IT FORM GITIGNORE THEN 
+$ git status - modified gitignore and untracked db.accdb will show now becoz we are not tracking the file
