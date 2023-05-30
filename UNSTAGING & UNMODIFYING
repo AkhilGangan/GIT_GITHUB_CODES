@@ -13,31 +13,31 @@ $ git status - modified
 $ git add first_renamed.txt - staging
 $ git status - staged now commit it 
 GIT GIVES A SUGGESTION HOW WE CAN UNSTAGED A STAGED FILE 
-$ git restore --staged first_renamed.txt - for unsatging 
+**$ git restore --staged first_renamed.txt - for unstaging 
 $ git status - unstaged now
 
 *UNMODIFYING
-SUPPOSE I CHANGE A DATA IN FIRST_RENAMED.TXT AND NOW I WANT IT BACK SO  
+**SUPPOSE I CHANGE A DATA IN FIRST_RENAMED.TXT AND NOW I WANT IT BACK SO  
 $ git status - modified 
-$ git checkout -- first_renamed.txt - for getting previous data back 
+**$ git checkout -- first_renamed.txt - for getting previous data back 
 $ git status - clean 
-SUPPOSE I CHANGE GITIGNORE AND FIRST_RENAMED FILES
+**SUPPOSE I CHANGE GITIGNORE AND FIRST_RENAMED FILES
 $ git status - 2 modified
-$ git checkout -- first_renamed.txt -
+$ git checkout -- first_renamed.txt -for getting previous data back 
 $ git status - only 1 modified now 
-SOMETIMES IT IS DANGER COMMAND BECOZ OUR NEW DATA IS IMP SO WE SHOULDCOMMIT IT BEFORE UNMODIFYING
-$ git add .gitignore -
+**SOMETIMES IT IS DANGER COMMAND BECOZ OUR NEW DATA IS IMP SO WE SHOULDCOMMIT IT BEFORE UNMODIFYING
+$ git add .gitignore - staging
 $ git status - staged file modified
-$ git checkout -- .gitignore - 
+**$ git checkout -- .gitignore - for getting previous data back 
 $ git status - staged file modified nothing happens
-NOTHING CHANGE IN GITIGNORE
-$ git commit -m "commiting" - 
+**NOTHING CHANGE IN GITIGNORE BECOZ WE HAVE STAGED IT 
+$ git commit -m "commiting" - commiting
 $ git status - clean
 LETS CHANGE FEW FILES 
 GITIGNORE AND FIRST_RENAMED
 $ git status - modified 2 file
-IF I WANT MY previous COMMITS BACK EVEN IF I CHANGE 50 FILES SO USED 
-$ git checkout -f - takes back to PREVIOUS COMMITS
+**IF I WANT MY previous COMMITS BACK EVEN IF I CHANGE 50 FILES SO USED 
+**$ git checkout -f - takes back to PREVIOUS COMMITS
 $ git status - clean 
 ALL CHANGES HAVE BEEN LOSE NOW AND GETS OUR PREVIOUS COMMITS 
-SOMETIMES THIS COMMAND IS DANGER BECOZ SOMETIMES OUR IMP CODES GET LOSE, WE CAN USE IT FOR A PRACTICING A PROJECT
+**SOMETIMES THIS COMMAND IS DANGER BECOZ SOMETIMES OUR IMP CODES GET LOSE, WE CAN USE IT FOR A PRACTICING A PROJECT
