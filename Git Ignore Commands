@@ -3,7 +3,7 @@ $ touch error.log - for creating file ,touch command is used
 $ git status - Untracked showing
 **$ touch .gitignore - Create .gitignore file
 $ git status - untracked
-Inside gitignore file  write text "error.log" 
+**Inside gitignore file  write text "error.log" 
 $ git status - error.log gets IGNORE
 **$ git add --a /git add . - for staging
 $ git commit -m "Adding gitignore" - for commit
@@ -11,7 +11,7 @@ IF A CHANGE IS MADE IN ERROR.LOG then
 git status - No commit becoz it is ignore
 IF THERE ARE 4-5 COPIES OF LOG FILE then
 $ git status - will show .log file untracked
-SO WRITE "*.log" INSIDE GITIGNORE FILE FOR AVOIDING ALL LOG FILES
+**SO WRITE "*.log" INSIDE GITIGNORE FILE FOR AVOIDING ALL LOG FILES
 $ git status - modified .gitignore
 NOT ONLY FILES ALSO FOLDERS GET IGNORE
 SUPPOSE "dir" folder created ,inside copy logfiles and db file
@@ -20,7 +20,7 @@ WRITE "dir/" INSIDE GITIGNORE FILE
 $ git status - gitignore modified
 IF A "static" FOLDER CREATED AND INSIDE IT "dir" FOLDER CREATED AND INSIDE THAT "text file"CREATED THEN
 $ git status -  git ignore modified
-* GIT BYDEFAULT IGNORES A BLANK FOLDER
+** GIT BYDEFAULT IGNORES A BLANK FOLDER
 SUPPOSE INSIDE STATIC  A "text file" CREATED THEN
 $ git status - static untracked 
 $ git add --a - staging
