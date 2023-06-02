@@ -30,7 +30,7 @@ $ git status - clean
 NOW CHANGING THIS.TXT AND WRITING THIS IS FROM MASTER
 $ git commit -a -m "Changed" -
 NOW I WILL CHANGE BRANCH AND MAKE NEW BRANCH 
-$ git checkout -b develop -
+**$ git checkout -b develop -
 NOW I WILL DELETE FEW FILES LIKE DB ,EXCEL, FIRST_RENAMED,THIS
 $ git commit -a -m "chnaged" -
 $ git status - clean 
