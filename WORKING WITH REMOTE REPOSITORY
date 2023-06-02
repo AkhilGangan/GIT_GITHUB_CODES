@@ -9,7 +9,7 @@ REMOTE IS MAKING REPOSITORY TO HOST IT ON GITHUB
 IF THERE IS NO REPOSITORY MAKE IT USING INIT COMMAND AND STAGE IT THEN COMMIT AND REMOTE IT ON GITHUB
 OR ELSE IF REPOSITORY IS ALREADY THERE THEN USED BELOW COMMAND TO PUSH IT 
 SHIFT+INSERT TO PASTE ON GITBASH
-$ git remote add origin git@github.com:AkhilGangan/GITHUB_GIT_PRACTICE.git - Meaning git remote add a url whose name is origin now 
+**$ git remote add origin git@github.com:AkhilGangan/GITHUB_GIT_PRACTICE.git - Meaning git remote add a url whose name is origin now 
 $ git remote - origin means we have a remote whose name is origin ,its name can be anything 
 $ git remote -v - will show two urls one for push and one for pull request
 COPY CODE FOR PUSH FROM GITHUBH AND SHIFT INSERT HERE  
