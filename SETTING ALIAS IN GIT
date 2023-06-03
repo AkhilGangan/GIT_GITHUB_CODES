@@ -1,5 +1,5 @@
 <---------SETTING ALIAS IN GIT--------->
-ALIAS GENERALLY MEANS INSTEAD OF WRITING BIG CODE WRITE A SMALL CODE 
+*ALIAS GENERALLY MEANS INSTEAD OF WRITING BIG CODE WRITE A SMALL CODE 
 $ git status - clean
 $ git st - not in git command
 $ git config --global alias.st status - I tell git whenever i write st show me status of git 
@@ -18,4 +18,4 @@ $ git unstage this.txt - for unstage
 $ git st - unstaged file    
 **$ git config --global alias.last 'log -p -1' - SHORTCUT for last commit
 $ git last - last commit shows here 
-WE USED ALIAS WHEN WE ARE USING A COMMAND REGULAR IN GIT 
+*WE USED ALIAS WHEN WE ARE USING A COMMAND REGULAR IN GIT 
