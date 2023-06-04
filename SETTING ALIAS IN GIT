@@ -12,7 +12,7 @@ $ git st - modified
 $ git add . - staging
 $ git st - staged
 TO UNSTAGE WE USE 
-$ git restore --staged - unstaged 
+**$ git restore --staged - unstaged 
 $ git config --glbal alias.unstage 'restore --staged --'- -- for file name give '' 
 $ git unstage this.txt - for unstage 
 $ git st - unstaged file    
