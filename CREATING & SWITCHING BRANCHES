@@ -1,21 +1,21 @@
 <---------CREATING & SWITCHING BRANCHES---------->
 OPEN GITBASH IN FOLDER
 $ git status - modified this.txt
-$ git restore this.txt - to discard changes 
-*THIS COMMAND IS DANGEROUS SOMETIMES BECOZ WE LOST DATA 
+**$ git restore this.txt - to discard changes 
+THIS COMMAND IS DANGEROUS SOMETIMES BECOZ WE LOST DATA 
 $ git status - clean 
-NOW LETS BRANCH
-SUPPOSEI I WANT TO CHANGE FEW THING IN FOLDER, FOR THAT I WILL MAKE NEW BRANCH NOT IN MASTER BRANCH
+*NOW LETS BRANCH
+*SUPPOSEI I WANT TO CHANGE FEW THING IN FOLDER, FOR THAT I WILL MAKE NEW BRANCH NOT IN MASTER BRANCH
 **$ git checkout -b develop - -b means make branch and name develop and take inside it 
-NOW I DELETED DIR FILES AND RENAME IT AS DIRECTORY 
-NOW MAKING A NEW FOLDER TEMPLATE AND A GARBAGE FOLDER INSIDE IT ALL LOG FILES WILL COME 
+*NOW I DELETED DIR FILES AND RENAME IT AS DIRECTORY 
+*NOW MAKING A NEW FOLDER TEMPLATE AND A GARBAGE FOLDER INSIDE IT ALL LOG FILES WILL COME 
 ALSO MAKE FOLDER IMPORTANT FILES INSIDE IT ADD EXCEL AND DB FILES
-AS DIRECTORY IS GETTING IGNORE MAKE A TEXT FILE INSIDE IT 
+AS DIRECTORY FOLDER IS EMPTY , IT IS GETTING IGNORE MAKE A TEXT FILE INSIDE IT 
 $ git status - modified so many things  
 $ git add . - staging
 $ git commit -m "Initial commit" - commit
-SUPPOSE I GOT ORDER TO DELETE A LOG FILE IN MASTER I WILL CHANGE BRANCH 
-$ git checkout master - WILL SHOW ALL FILES BUT GARBAGE FILE ALSO SHOWS BECOZ IT IS INSIDE GITIGNORE
+*SUPPOSE I GOT ORDER TO DELETE A LOG FILE IN MASTER I WILL CHANGE BRANCH 
+**$ git checkout master - WILL SHOW ALL FILES BUT GARBAGE FILE ALSO SHOWS BECOZ IT IS INSIDE GITIGNORE
 WILL DO ONE WORK REMOVE EVERYTHING FROM GITIGNORE
 NOW START FROM STARTING 
 $ rm -rf .git - remove git repository
@@ -28,16 +28,16 @@ $ git status - modified
 $ git commit -a -m "changed first renamed" - direct commit 
 $ git status - clean 
 NOW CHANGING THIS.TXT AND WRITING THIS IS FROM MASTER
-$ git commit -a -m "Changed" -
+$ git commit -a -m "Changed" - direct commit
 NOW I WILL CHANGE BRANCH AND MAKE NEW BRANCH 
 **$ git checkout -b develop -
 NOW I WILL DELETE FEW FILES LIKE DB ,EXCEL, FIRST_RENAMED,THIS
-$ git commit -a -m "chnaged" -
+$ git commit -a -m "chnaged" - commit
 $ git status - clean 
 NOW LETS CHANGE THE BRANCH 
 WE WILL SEE ALL DELETED FILES ARE SHOWING 
-$ git checkout master - all delete files are shown here 
-$ git checkout develop - inside develop branch 
+**$ git checkout master - all delete files are shown here 
+**$ git checkout develop - inside develop branch 
 $ git branch - WILL SHOW ALL BRANCHES 
 * GREEN COLOR SHOWS THAT WE ARE ON THAT BRANCH
 $ git checkout master - return to master branch
