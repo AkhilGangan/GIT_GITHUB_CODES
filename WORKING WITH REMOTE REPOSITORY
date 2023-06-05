@@ -1,34 +1,34 @@
 <---------WORKING WITH REMOTE REPOSITORY--------->
 OPEN GITHUB AND LOGIN 
-CLICK + THEN MAKE NEW REPOSITORY AND GIVE NAME AND DESCRIPTION AND MAKE IT PUBLIC AND CREATE
+CLICK + THEN MAKE NEW REPOSITORY AND GIVE NAME AND DESCRIPTION AND MAKE IT PUBLIC AND CREATE.
 OPEN GIT BASH BY RIGHT CLICK ON FOLDER
 $ git status - clean
-$ git remote - nothing shows 
+**$ git remote - nothing shows 
 **PULL MEANS GETTING DATA FROM GITHUB  AND PUSH MEANS TO ADD OR INSERT DATA INTO GITHUB FROM OUR PC 
 REMOTE IS MAKING REPOSITORY TO HOST IT ON GITHUB
-*IF THERE IS NO REPOSITORY MAKE IT USING INIT COMMAND AND STAGE IT THEN COMMIT AND REMOTE IT ON GITHUB
+IF THERE IS NO REPOSITORY MAKE IT USING INIT COMMAND AND STAGE IT THEN COMMIT AND REMOTE IT ON GITHUB
 OR ELSE IF REPOSITORY IS ALREADY THERE THEN USED BELOW COMMAND TO PUSH IT 
 SHIFT+INSERT TO PASTE ON GITBASH
 **$ git remote add origin git@github.com:AkhilGangan/GITHUB_GIT_PRACTICE.git - Meaning git remote add a url whose name is origin now 
-$ git remote - origin means we have a remote whose name is origin ,its name can be anything 
+**$ git remote - origin means we have a remote whose name is origin ,its name can be anything 
 **$ git remote -v - will show two urls one for push and one for pull request
 COPY CODE FOR PUSH FROM GITHUBH AND SHIFT INSERT HERE  
-$ git push -u origin master - TO PUSH OUR CHANGES BUT HERE WILL SHOW THAT YOU DONT HAVE PERMISSION
+**$ git push -u origin master - TO PUSH OUR CHANGES BUT HERE WILL SHOW THAT YOU DONT HAVE PERMISSION
 TO GET PERMISSION GO TO GITHUB ACCOUNT SETTINGS AND CLICK SSH & GPG KEYS AND ADD NEW SSH KEY 
 GIVE TITLE 'AKHIL PERSONAL COMPUTER -DELL'
 NOW GENERATE SSH KEYS AND SEARCH ON GOOGLE SSH KEY GITHUB AND GENERATE
 RUN THE COMMAND ON GITBASH
-$ ssh-keygen -t ed25519 -C "akhilg7162@ gmail.com" - press enter enter two times 
-$ eval "$(ssh-agent -s)" - will show Agent pid 1899 or any number 
-$ ssh-add ~/.ssh/id_ed25519 - for adding SSH private key in SSH agent will show identity added
-"Adding a new SSH key to your GitHub account." Using tail command 
-$ tail ~/.ssh/id_ed25519.pub - will show key copy it and add it to github 
-$  git push -u origin master - Now it has push it and we got access
+**$ ssh-keygen -t ed25519 -C "akhilg7162@ gmail.com" - press enter enter two times 
+**$ eval "$(ssh-agent -s)" - will show Agent pid 1899 or any number 
+**$ ssh-add ~/.ssh/id_ed25519 - for adding SSH private key in SSH agent will show identity added
+*"Adding a new SSH key to your GitHub account." Using tail command 
+**$ tail ~/.ssh/id_ed25519.pub - will show key copy it and add it to github 
+$ git push -u origin master - Now it has push it and we got access
 CHECK IT IN REPOSITORY AND WE HAVE ALL FILES WITH COMMITS 
 
 $ git status - clean
-NOW MAKE A FILE THIS.TXT AND ADD CONTENT
+*NOW MAKE A FILE THIS.TXT AND ADD CONTENT
 $ git status - untracked 
-$ git add . -
-$ git commit -m "Added this.txt" -
-$ git push -u origin master - will show our this.txt on github after refreshing 
+$ git add . - staging
+$ git commit -m "Added this.txt" - commit
+**$ git push -u origin master - will show our this.txt on github after refreshing
