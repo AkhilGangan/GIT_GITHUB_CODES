@@ -35,7 +35,7 @@ NOW SUPPOSE OUR BOSS ASKED ABOUT WEBSITE THEN I WILL CHANGE MY BRANCH
 $ git checkout master - inside master branch
 NOW SUPPOSE WE HAD TOLD TO CHANGE LINK INTO ABOUT OPTION 
 WE CHANGE IT IN HTML FILE 
-$ git add . -
+$ git add . - staging
 $ git commit -m "Added about "- 
 $ git checkout tryCleanup - inide other branch 
 NOW SUPPOSE I MADE A FEW CHANGES THAT I LIKE AND SAVED IT 
