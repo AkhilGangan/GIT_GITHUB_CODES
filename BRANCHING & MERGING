@@ -39,7 +39,7 @@ $ git add . -
 $ git commit -m "Added about "- 
 $ git checkout tryCleanup - inide other branch 
 NOW SUPPOSE I MADE A FEW CHANGES THAT I LIKE AND SAVED IT 
-$ git add . -
+$ git add . - staging
 $ git commit -m "fixed the structure" -
 NOW MOVING INSIDE MASTER 
 $ git check master -
