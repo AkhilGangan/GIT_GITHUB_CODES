@@ -55,8 +55,8 @@ $ git merge tryCleanup - for MERGING
 IT SAYS THAT THERE ARE SOME MERGE CONFLICTS , SO SELECT BETWEEN OPTION WHICH YOU HAVE TO CHOOSE IN HTML FILE 
 ACCEPTING THE INCOMING CHANGE
 $ git status - you have unmerged paths
-$ git add . -
-$ git commit -
+$ git add . - staging 
+$ git commit - commit
 opens a vim editor in which me write commit messagewhich is default given 
 NOW PRESS ESC AND CLICK :WQ ENTER
 MERGE BRANCH tryCleanup
