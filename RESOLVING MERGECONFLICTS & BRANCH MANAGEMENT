@@ -66,6 +66,6 @@ DELETING BRANHCHES
 git branch -d issue2 - error the branch is not fully merged 
 git branch -d issue1 - Deleted branch issue 1 becoz it is merged 
 git branch - not showing issue1 it has been deleted
-git branch -D issue2 - Deleted issue2 D is capital 
+**git branch -D issue2 - Deleted issue2 D is capital 
 git branch - only master there 
 SO LIKE THIS WE CAN CREATE-MERGE AND DELETE BRANHCHES IN GIT FOR OUR PROJECT WORK 
