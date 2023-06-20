@@ -1,4 +1,3 @@
-
 <---------BRANCHING & MERGING--------->
 DOWNLOAD VS CODE 
 OPEN GIT BASH AND DELETE GIT REPOSITORY 
@@ -11,7 +10,7 @@ OPEN VS CODE IN NEW FOLDER
 OPEN TERMINAL & WE CAN RUN GIT COMMANDS 
 BUT IT IS BETTER TO USE GIT BASH 
 OPEN GIT BASH IN NEW FOLDER
-MAKE INDEX.HTNL FILE in VS CODE INSIDE THE FOLDER AND USE BOILER PLATE
+MAKE INDEX.HTML FILE in VS CODE INSIDE THE FOLDER AND USE BOILER PLATE
 NOW OPEN GETBOOSTRAP.COM AND COPY STARTER TEMPLATE 
 PASTE IT IN INDEX.HTML AND GO LIVE
 HELLO WORLD WILL BE DISPLAY
@@ -35,29 +34,29 @@ NOW SUPPOSE OUR BOSS ASKED ABOUT WEBSITE THEN I WILL CHANGE MY BRANCH
 $ git checkout master - inside master branch
 NOW SUPPOSE WE HAD TOLD TO CHANGE LINK INTO ABOUT OPTION 
 WE CHANGE IT IN HTML FILE 
-$ git add . - staging
-$ git commit -m "Added about "- 
+$ git add . - staging   
+$ git commit -m "Added about "- commit
 $ git checkout tryCleanup - inide other branch 
 NOW SUPPOSE I MADE A FEW CHANGES THAT I LIKE AND SAVED IT 
 $ git add . - staging
-$ git commit -m "fixed the structure" -
+$ git commit -m "fixed the structure" - commit
 NOW MOVING INSIDE MASTER 
-$ git check master -
+$ git checkout master - inside master branch
 NOW SUPPOSE I TOLD THE BOSS I HAVE MADE FEW CHANGES CAN YOU SEE IT 
-$ git checkout tryCleanup - 
+$ git checkout tryCleanup - inside other branch
 BOSS SAID WOW NICE WORK 
 NOW MAKE FEW CHANGES AND MERGE IT TO MASTER 
-$ git commit -a -m "made changes to dropdown" -
+$ git commit -a -m "made changes to dropdown" - direct commit
 ONE IMP POINT WHEN YOU SWITCH THE BRANCH CHECK IT THAT YOU HAVE COMMITED THE LAST BRANCH BEFORE SWITCHING
-$ git checkout master -
+$ git checkout master - inside master branch
 $ git status - clean 
-$ git merge tryCleanup - for MERGING
-IT SAYS THAT THERE ARE SOME MERGE CONFLICTS , SO SELECT BETWEEN OPTION WHICH YOU HAVE TO CHOOSE IN HTML FILE 
+**$ git merge tryCleanup - for MERGING
+**IT SAYS THAT THERE ARE SOME MERGE CONFLICTS , SO SELECT BETWEEN OPTION WHICH YOU HAVE TO CHOOSE IN HTML FILE 
 ACCEPTING THE INCOMING CHANGE
 $ git status - you have unmerged paths
-$ git add . - staging 
-$ git commit - commit
-opens a vim editor in which me write commit messagewhich is default given 
-NOW PRESS ESC AND CLICK :WQ ENTER
-MERGE BRANCH tryCleanup
-NOW OUR MASTER BRANCH HAVE BEEN CHANGED
+$ git add . - staging
+$ git commit - commiting
+**opens a vim editor in which me write commit messagewhich is default given 
+**NOW PRESS ESC AND CLICK :WQ ENTER
+**MERGE BRANCH tryCleanup
+NOW OUR MASTER BRANCH HAVE BEEN CHANGED 
