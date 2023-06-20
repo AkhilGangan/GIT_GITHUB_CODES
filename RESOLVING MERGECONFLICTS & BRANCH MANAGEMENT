@@ -12,36 +12,36 @@ $ git status - untracked file index.html
 $ git add . - now start tracking
 $ git commit -m "Added index.html"- commit
 $ git status - clean 
-NOW WE HAVE DONE C0 COMMIT AND NOW WE DO OTHER COMMITS
-CHANGING TITLE AS "THIS IS MY CHANGED TITLE 1"
+**NOW WE HAVE DONE C0 COMMIT AND NOW WE DO OTHER COMMITS
+**CHANGING TITLE AS "THIS IS MY CHANGED TITLE 1"
 $ git status - modified
 $ git add . - staging
-$ git commit -m "Added title 1" - commit
-NOW DONE C1 COMMIT AND CHANGING TITLE AS "THIS IS MY CHANGED TITLE 2"
+**$ git commit -m "Added title 1" - commit
+**NOW DONE C1 COMMIT AND CHANGING TITLE AS "THIS IS MY CHANGED TITLE 2"
 $ git add . - staging
-$ git commit -m "Added title 2" - commit
+**$ git commit -m "Added title 2" - commit
 $ git status - clean 
-NOW DONE C2 COMMIT AND WE WILL CHANGED BRANCH 
-$ git checkout -b issue1 - inside new branch
-AND NOW CHANGING TITLE AS "THIS IS MY ISSUE1 TITLE 2 - C4"
-$ git commit -a -m "This is C4" - Direct commit
-NOW DONE C4 COMMIT
-AND NOW CHANGING TITLE AS "THIS IS MY ISSUE1 TITLE 3 - C5"
-$ git commit -a -m "This is C5" - Direct commit
-NOW DONE C5 COMMIT
-AND NOW CHANGING TITLE AS "THIS IS MY ISSUE1 TITLE 4 - C7"
-$ git commit -a -m "This is C7" - Direct commit
-CHECKING STATUS BEFORE CHANGING BRANCH 
-VVIMP POINT OUR PREVIOUS BRANCH SHOULD BE CLEAN BEFORE CHANGING TO BRANCH
+**NOW DONE C2 COMMIT AND WE WILL CHANGED BRANCH 
+**$ git checkout -b issue1 - inside new branch
+**AND NOW CHANGING TITLE AS "THIS IS MY ISSUE1 TITLE 2 - C4"
+**$ git commit -a -m "This is C4" - Direct commit
+**NOW DONE C4 COMMIT
+**AND NOW CHANGING TITLE AS "THIS IS MY ISSUE1 TITLE 3 - C5"
+**$ git commit -a -m "This is C5" - Direct commit
+**NOW DONE C5 COMMIT
+**AND NOW CHANGING TITLE AS "THIS IS MY ISSUE1 TITLE 4 - C7"
+**$ git commit -a -m "This is C7" - Direct commit
+**CHECKING STATUS BEFORE CHANGING BRANCH 
+**VVIMP POINT OUR PREVIOUS BRANCH SHOULD BE CLEAN BEFORE CHANGING THE BRANCH
 $ git status - clean 
 $ git checkout master - inside master
-NOW CHANGING TITLE AS "THIS IS MY CHANGED TITLE 3 - C6"
-$ git commit -a -m "This is C6" - Direct commit
-NOW I HAVE TO MERGE MY ISSUE1 BRANCH INTO MASTER 
-$ git merge issue1 - merge failed due to merge CONFLICTS
-IN VS CODE IT WILL SHOW C6 & C7 COMMIT TITLE AND GIVE OPTION TO CHOOSE ONE 
-WE WILL CHOOSE INCOMING CHANGE C7 
-WE CAN ALSO CHANGED MANUALLY 
+**NOW CHANGING TITLE AS "THIS IS MY CHANGED TITLE 3 - C6"
+**$ git commit -a -m "This is C6" - Direct commit
+**NOW I HAVE TO MERGE MY ISSUE1 BRANCH INTO MASTER 
+**$ git merge issue1 - merge failed due to merge CONFLICTS
+**IN VS CODE IT WILL SHOW C6 & C7 COMMIT TITLE AND GIVE OPTION TO CHOOSE ONE 
+**WE WILL CHOOSE INCOMING CHANGE C7 
+**WE CAN ALSO CHANGED MANUALLY 
 $ git status - unmerged paths 
 $ git add index.html - staging
 $ git status - conflicts have been fixed now commit it 
@@ -49,23 +49,23 @@ $ git commit -m "Merged issue 1 " - commit
 $ git log - All commit are showing and also merge files 
 
 BRANCH MANAGEMENT COMMANDS
-$ git branch - show master and issue 1 branch 
-NOW MY MIND IS SAYING TO SOLVE ANOTHER ISSUE SO I WILL MAKE NEW BRANCH 
-$ git checkout -b issue2 - inside issue2
-NOW SUPPOSE I MADE CHANGES RAPIDLY AND DO SOMETHING WRONG 
+**$ git branch - show master and issue 1 branch 
+**NOW MY MIND IS SAYING TO SOLVE ANOTHER ISSUE SO I WILL MAKE NEW BRANCH 
+**$ git checkout -b issue2 - inside issue2
+**NOW SUPPOSE I MADE CHANGES RAPIDLY AND DO SOMETHING WRONG 
 $ git add . - staging
 $ git commit -m "something wrong done"- commit 
 $ git checkout master - inside master
 $ git status - clean 
 $ git branch - will show new branch also 
-$ git branch -v - branch name and hash and last commit will be shown 
-$ git branch --merged - issue1 master
-SHOWS MERGE FILES IN ABOVE COMMAND AND NOT MERGED FILES IN BELOW COMMAND
-$ git branch --no-merged - issue2 
-DELETING BRANHCHES 
-$ git branch -d issue2 - error the branch is not fully merged 
-$ git branch -d issue1 - Deleted branch issue 1 becoz it is merged 
-$ git branch - not showing issue1 it has been deleted
+**$ git branch -v - branch name and hash and last commit will be shown 
+**$ git branch --merged - issue1 master
+**SHOWS MERGE FILES IN ABOVE COMMAND AND NOT MERGED FILES IN BELOW COMMAND
+**$ git branch --no-merged - issue2 
+**DELETING BRANHCHES 
+**$ git branch -d issue2 - error the branch is not fully merged 
+**$ git branch -d issue1 - Deleted branch issue 1 becoz it is merged 
+**$ git branch - not showing issue1 it has been deleted
 **$ git branch -D issue2 - Deleted issue2 D is capital 
 $ git branch - only master there 
 SO LIKE THIS WE CAN CREATE-MERGE AND DELETE BRANHCHES IN GIT FOR OUR PROJECT WORK 
