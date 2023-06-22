@@ -1,0 +1,568 @@
+* - IMPORTANT POINTS
+** - VERY IMP COMMANDS
+
+<------BASIC COMMANDS------->
+$git - for commands in git
+$pwd - for print working directory / present working directory
+$cd- change directory
+**$cd Desktop - to move inside folder desktop
+**$cd /c- to move to or come out of user folder of c drive
+
+<-----MAKING USERNAME AND EMAILID----->
+**$git status - to check status very important becoz it show whether we have made changes in any file or not
+**$git config --global user.name "Akhil" - makes a user name in git
+**$git config --global user.email "akhilg7162@gmail.com" - makes a email of user 
+**$git config --list - to check our saved name and email
+**$git config --global core.editor emacs -
+**$git config --global core.editor vim - it is editor it has various uses or functions in git 
+**$git config user.name- to check which user name is there
+**$git config user.email- to check which user email is there
+
+<------MAKING GIT FOLDER STAGING COMMIT-------->
+$git status - if file show not a git repository then used init
+**$ git init - makes a .git repository that is hidden in folder
+$ git status - will show files that are untracked then add file to stage area
+**$ git add --a -  To Adds all files in staging area
+**$ git add first.txt - To Add a single file in stage
+**$ git commit -m "Initial commit" - To add files in git repository used commit with ""  shows comments 
+**$ git log - Will show every commit in git repository with comments, name ,email and many more
+
+<-------GIT CLONE------>
+$ git status - 
+**$ rm -rf .git - To delete git repository and every data inside it
+**$ git clone https://github.com/AkhilGangan/RESPONSIVE_WEBSITE_USING-HTML5-AND-CSS3.git - for making clone of a repository
+**$ git clone https://github.com/AkhilGangan/RESPONSIVE_WEBSITE_USING-HTML5-AND-CSS3.git MYWEBSITE - to give folder name write it in last
+$ git status - fatal: not a git repository (or any of the parent directories): .git
+$ pwd - /c/Git and Github/For practice
+$ ls - List items in folder
+RESPONSIVE_WEBSITE_USING-HTML5-AND-CSS3/  db.accdb  first.txt  myexcel.xlsx
+$ cd RESPONSIVE_WEBSITE_USING-HTML5-AND-CSS3/ - to get inside folder
+$ pwd-/c/Git and Github/For practice/RESPONSIVE_WEBSITE_USING-HTML5-AND-CSS3
+$ ls- README.md  bg1.jpg      img/        logo.png   style.css
+bg.jpg     contact.jpg  index.html  phone.css
+$ git status - if a change is made in readme than it shows here
+$ git add --a - add all in stage area
+$ git status -staging done now commit
+$ git commit -m "Changed readme" - Commit
+$ git status -  WILL show that my file branch is ahead by 1 commit from origin/main file
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+$ git log - checks commits
+**q - for quiting out of log
+**fi + tab to autocomplete = first.txt if there is only single file of first
+
+<---------GIT IGNORE--------->
+$ touch error.log - for creating file ,touch command is used
+$ git status - Untracked showing
+**$ touch .gitignore - Create .gitignore file
+$ git status - untracked
+**Inside gitignore file  write text "error.log" 
+$ git status - error.log gets IGNORE
+**$ git add --a /git add . - for staging
+$ git commit -m "Adding gitignore" - for commit
+IF A CHANGE IS MADE IN ERROR.LOG then
+git status - No commit becoz it is ignore
+IF THERE ARE 4-5 COPIES OF LOG FILE then
+$ git status - will show .log file untracked
+**SO WRITE "*.log" INSIDE GITIGNORE FILE FOR AVOIDING ALL LOG FILES
+$ git status - modified .gitignore
+NOT ONLY FILES ALSO FOLDERS GET IGNORE
+SUPPOSE "dir" folder created ,inside copy logfiles and db file
+$ git status - dir/ untracked
+WRITE "dir/" INSIDE GITIGNORE FILE
+$ git status - gitignore modified
+IF A "static" FOLDER CREATED AND INSIDE IT "dir" FOLDER CREATED AND INSIDE THAT "text file"CREATED THEN
+$ git status -  git ignore modified
+** GIT BYDEFAULT IGNORES A BLANK FOLDER
+SUPPOSE INSIDE STATIC  A "text file" CREATED THEN
+$ git status - static untracked 
+$ git add --a - staging
+$ git commit -m "Added static" - commit
+$ git status - clean
+**TO AVOID OUTSIDE "dir" FOLDER THEN WRITE "/dir/"
+**$ git status - static/dir/ untracked, becoz inside dir is not ignore
+WE CAN ALSO GIVE FILE PATH
+FOR INSIDE DIR FOLDER IGNORE "static/dir"
+$ git status - modified gitignore
+DOUBT IS IF WE MAKE CHANGES IN TXT FILE OF STATIC FOLDER THAN IT IS NOT GETTING IGNORE SO WE SHOULD UNTRACKED IT FIRST SO IT GETS DELETED FROM GIT BUT NOT FROM FOLDER SO NOW WE CAN CHANGE TXT AND NOTHING WILL BE SHOWN IN GIT STATUS
+MY DOUBT OF GITIGNORE IS SOLVE IN RENAMING MOVING AND UNTRACKING DOWN BELOW 
+
+<--------GIT DIFF--------->
+USES - 1:CHECK DIFFERENCE BETWEEN WORKING DIRECTORY AND STAGING AREA 
+2:ALSO LAST COMMIT AND STAGING AREA
+$ git status - modified files will show gitignore static
+$ git add . - staging
+$ git status - staging area now
+NOW MODDIFYING IN TEXT FILE
+$ git status - 2 things will show staging area and working file
+**$ git diff - WILL SHOW DIFFERENCE BETWEEN STAGING AREA AND WORKING DIRECTORY
+$ git add . - staging
+$ git diff - WILL SHOW NOTHING BECOZ IT IS STAGE NOW
+$ git status - staged
+**$ git diff --staged - WILL SHOW DIFFERENCE BETWEEN LAST COMMIT AND STAGING AREA
+$ git status - staged file modified
+
+<------SKIPPING STAGING AREA------->
+$ git status- staged modified
+$ git commit -m "good commit"- for commiting staged files
+$ git status - nothing to commit clean
+SUPPOSE A CHANGE IS MADE IN FIRST.TXT FILE
+$ git status - changes not staged
+NOW SUPPOSE ADDING A NEW FILE 'second.txt' 
+$ git status - one change file and one untracked file shown here
+FOR SKIPPING STAGING AREA 
+**$ git commit -a -m "Direct commit" - direct commit
+$ git status - now only untracked file shows and other changed file is committed
+IN MOST OF CASES WE WILL NOT DIRECT COMMIT TO TRACK THE FILE WE NEED FIRST TO STAGED THEM
+$ git add second.txt -
+$ git commit -a -m "added second.txt"- direct commit
+$ git status - clean
+$ git log - all commits will be shown here
+
+<--------REMOVING,RENAMING,UNTRACKING -------->
+$ git status- clean nothing to commit
+**SUPPOSE RENAMING SECOND.TXT *SHORTCUT CLICK F2 AND SELECT FILE TO THIRD.TXT
+$ git status - deleted second and added third will show untracked
+$ git add . - staging
+$ git status -will show you renamed second to third after staging 
+$ git commit -m "renamed 2nd to 3rd" - commiting
+IF I WANT TO REMOVE OR RENAME A FILE USING GIT THAN WE WILL USED 
+SUPPOSE DELETING 3RD.TXT FROM FOLDER
+$ git status - deleted 3rd.txt
+I CAN COMMIT HERE BUT WE WILL NOT DO THAT WE BRING FILE AGAIN USING UNDO
+$ git status - clean
+
+*REMOVING OR DELETING FILES
+**$ git rm third.txt - 3rd.txt has been removed or deleted from folder now
+$ git status - IT HAS ALSO STAGED IT 
+$ git commit  -m "Removed bad file 3rd.txt"-  commiting
+
+*RENAMING FILES
+IF I WANT TO RENAME FIRST INTO FIRST_RENAMED.TXT
+**mv - MOVE means renamed 
+**$ git mv first.txt first_renamed.txt - after enter the file has been renamed 
+$ git status - it is staged will show to commit it 
+$ git commit  -m "renamed first.txt" - commiting file
+
+*UNTRACKING
+$ git status - clean 
+IN .GITIGNORE SUPPOSE I WANT TO IGNORE db.accdb FILE THEN I ADDED IT IN .GITIGNORE FILE
+$ git status - modified.gitignore
+$ git add . - staging  
+$ git commit -m "changed gitignore" - commiting
+**SUPPOSE I MADE A CHANGE IN db.accdb FILE THEN SEE
+**$ git status - modified db.accdb 
+**BECOZ IT IS ALREADY TRACKING FILE BEFORE ADDING TO .GITIGNORE SO WE HAVE TO UNTRACKED IT FOR THAT 
+**$ git rm --cached db.accdb - will not remove but stop tracking file means untracked the file now 
+**$ git status - deleted db.accdb but it is still there not deleted we have untracked it 
+$ git commit -m "removed db.accdb" - commiting
+$ git status- clean
+SUPPOSE I MADE CHANGE IN db.accdb
+$ git status - clean
+**SUPPOSE I REMOVED IT FORM GITIGNORE THEN 
+**$ git status - modified gitignore and untracked db.accdb will show now becoz we are not tracking the file 
+
+<------------VIEWING & CHANGING COMMITS------------>
+$ rm -rf .git - deleting git file
+NOW DOWNLING A GIT repository FROM GITHUB EXAMPLE PANDAS GITHUB 
+THEN CLONE IT COPY URL 
+
+*VIEWING COMMIT 
+**$ git clone "url" mypanda - CONTENT COPY IN MYPANDA FOLDER 
+$ git status - not a git repository
+OPEN GIT BASH IN MY PANDA
+$ git status - clean nothing to commit
+BRANCH IS BYDEFAULT MASTER
+**$ git log - WILL SHOW ALL COMITS MESSAGES
+**$ git log -p - WILL SHOW DIFFERENCE BETWEEN PAST COMMIT AND PRESENT COMMIT
+SIMPLE MEANS WHICH LINE IS ADDED AND WHICH IS REMOVED WILL BE SHOWED HERE 
+**$ git log -p -3(ncommits) - WILL SHOW ONLY LAST 3 COMMITS IF 2 THEN 2 COMMITS AND ALSO THERE DIFFERENCE
+**$ git log --stat - WILL SHOW IN SHORT WHAT IS INSERTED AND REMOVED IN files
+**$ git log --pretty=oneline - WILL SHOW IN ONE LINE ALL COMMITS
+**$ git log --pretty=short - will show commit, author, message  in short
+**AUTHOR IS FILE CREATER AND COMMITER IS WHO HAS CHANGE IT 
+**$ git log --pretty=full - more information WILL SHOW 
+**$ git log --since=2.days - SHOW LAST 2 DAYS COMMITS 
+**$ git log --since=2.weeks - "
+**$ git log --since=2.months- "
+**$ git log --since=2.years- "
+**MORE FORMATTING OPTIONS USING GIT SCM IN BELOW LINK 
+https://git-scm.com/docs/git-log
+**$ git log --pretty=format:"%h -- %an"- SHORT HASH COMMIT --- AUTHOR NAME WILL SHOWED HERE
+MANY MORE FORMATS CAN BE USED 
+MAINLY WE USED - git log ,git log -p -2 ENOUGH IT IS 
+
+*CHANGING COMMIT
+$ git status - clean
+$ git log -p -1 - 1 means show only one commit 
+**SUPPOSE I MADE A CHANGE IN FILE OF PANDAS IN AUTHOR.md "THIS IS CHANGE IS ADDED"
+$ git status - modified author.md
+NOW I WANT MY CHANGE TO BE SHOWED IN MY FIRST COMMIT EXAMPLE IN SIMONS COMMIT
+**$ git commit --amend - VIM EDITOR WILL OPEN HERE
+NOW I WILL CHANGE message TO MY MESSAGES
+"Akhil has change this message"
+**PRESS i for INSERT OR EDIT FILE THEN
+**esc THEN ':' THEN wq ENTER 
+NOW WE HAVE AMEND COMMIT
+**$ git log -p -1 - NOW WE HAVE CHANGE COMMIT MESSAGE HERE AND GIVEN OUR MESSAGE WILL SHOW HERE 
+OUR CHANGE IS NOT SHOWING BECOZ STAGING IS NOT DONE SO STAGED IT
+$ git status - modified
+$ git add .- staged
+**$ git commit --amend - Click i then EDIT IT ADDED NOW THEN esc button :wq ENTER
+COMMIT WILL SHOW NOW 
+**$ git log -p -1 - SHOW OUR MESSAGE AND CHANGE IN AUTHOR 
+SO LIKE THIS WE CAN CHANGE OUR OLD COMMIT 
+
+<---------UNSTAGING & UNMODIFYING-------->
+DELETING MY PANDA AND OPEN AGAIN GIT BASH
+
+*UNSTAGING
+$ git status - no git repository
+$ git init - making git repository
+$ git status - untracked file
+$ git add . - staging
+$ git commit -m "Initial commit" - commiting
+$ git status - clean 
+SUPPOSE I MADE A CHANGE IN FIRST_RENAMED.TXT
+$ git status - modified
+$ git add first_renamed.txt - staging
+$ git status - staged now commit it 
+GIT GIVES A SUGGESTION HOW WE CAN UNSTAGED A STAGED FILE 
+**$ git restore --staged first_renamed.txt - for unstaging 
+$ git status - unstaged now
+
+*UNMODIFYING
+**SUPPOSE I CHANGE A DATA IN FIRST_RENAMED.TXT AND NOW I WANT IT BACK SO  
+$ git status - modified 
+**$ git checkout -- first_renamed.txt - for getting previous data back 
+$ git status - clean 
+**SUPPOSE I CHANGE GITIGNORE AND FIRST_RENAMED FILES
+$ git status - 2 modified
+$ git checkout -- first_renamed.txt -for getting previous data back 
+$ git status - only 1 modified now 
+**SOMETIMES IT IS DANGER COMMAND BECOZ OUR NEW DATA IS IMP SO WE SHOULD COMMIT IT BEFORE UNMODIFYING
+$ git add .gitignore - staging
+$ git status - staged file modified
+**$ git checkout -- .gitignore - for getting previous data back 
+$ git status - staged file modified nothing happens
+**NOTHING CHANGE IN GITIGNORE BECOZ WE HAVE STAGED IT 
+$ git commit -m "commiting" - commiting
+$ git status - clean
+LETS CHANGE FEW FILES 
+GITIGNORE AND FIRST_RENAMED
+$ git status - modified 2 file
+**IF I WANT MY previous COMMITS BACK EVEN IF I CHANGE 50 FILES SO USED 
+**$ git checkout -f - takes back to PREVIOUS COMMITS
+$ git status - clean 
+ALL CHANGES HAVE BEEN LOSE NOW AND GETS OUR PREVIOUS COMMITS 
+**SOMETIMES THIS COMMAND IS DANGER BECOZ SOMETIMES OUR IMP CODES GET LOSE, WE CAN USE IT FOR A PRACTICING A PROJECT
+
+<---------WORKING WITH REMOTE REPOSITORY--------->
+OPEN GITHUB AND LOGIN 
+CLICK + THEN MAKE NEW REPOSITORY AND GIVE NAME AND DESCRIPTION AND MAKE IT PUBLIC AND CREATE.
+OPEN GIT BASH BY RIGHT CLICK ON FOLDER
+$ git status - clean
+**$ git remote - nothing shows 
+**PULL MEANS GETTING DATA FROM GITHUB  AND PUSH MEANS TO ADD OR INSERT DATA INTO GITHUB FROM OUR PC 
+REMOTE IS MAKING REPOSITORY TO HOST IT ON GITHUB
+IF THERE IS NO REPOSITORY MAKE IT USING INIT COMMAND AND STAGE IT THEN COMMIT AND REMOTE IT ON GITHUB
+OR ELSE IF REPOSITORY IS ALREADY THERE THEN USED BELOW COMMAND TO PUSH IT 
+SHIFT+INSERT TO PASTE ON GITBASH
+**$ git remote add origin git@github.com:AkhilGangan/GITHUB_GIT_PRACTICE.git - Meaning git remote add a url whose name is origin now 
+**$ git remote - origin means we have a remote whose name is origin ,its name can be anything 
+**$ git remote -v - will show two urls one for push and one for pull request
+COPY CODE FOR PUSH FROM GITHUBH AND SHIFT INSERT HERE  
+**$ git push -u origin master - TO PUSH OUR CHANGES BUT HERE WILL SHOW THAT YOU DONT HAVE PERMISSION
+TO GET PERMISSION GO TO GITHUB ACCOUNT SETTINGS AND CLICK SSH & GPG KEYS AND ADD NEW SSH KEY 
+GIVE TITLE 'AKHIL PERSONAL COMPUTER -DELL'
+NOW GENERATE SSH KEYS AND SEARCH ON GOOGLE SSH KEY GITHUB AND GENERATE
+RUN THE COMMAND ON GITBASH
+**$ ssh-keygen -t ed25519 -C "akhilg7162@ gmail.com" - press enter enter two times 
+**$ eval "$(ssh-agent -s)" - will show Agent pid 1899 or any number 
+**$ ssh-add ~/.ssh/id_ed25519 - for adding SSH private key in SSH agent will show identity added
+*"Adding a new SSH key to your GitHub account." Using tail command 
+**$ tail ~/.ssh/id_ed25519.pub - will show key copy it and add it to github 
+$ git push -u origin master - Now it has push it and we got access
+CHECK IT IN REPOSITORY AND WE HAVE ALL FILES WITH COMMITS 
+
+$ git status - clean
+*NOW MAKE A FILE THIS.TXT AND ADD CONTENT
+$ git status - untracked 
+$ git add . - staging
+$ git commit -m "Added this.txt" - commit
+**$ git push -u origin master - will show our this.txt on github after refreshing 
+
+<---------SETTING ALIAS IN GIT--------->
+*ALIAS GENERALLY MEANS INSTEAD OF WRITING BIG CODE WRITE A SMALL CODE 
+$ git status - clean
+$ git st - not in git command
+**$ git config --global alias.st status - I tell git whenever i write st show me status of git 
+**$ git st - clean
+**$ git config --global alias.ci commit- SHORTCUT for commit
+**$ git ci - nothing to commit 
+$ git commit - nothing to commit 
+IF SUPPOSE I MADE A CHANGE IN FILE OF THIS.TXT 
+$ git st - modified
+$ git add . - staging
+$ git st - staged
+TO UNSTAGE WE USE 
+$ git restore --staged - unstaged 
+**$ git config --glbal alias.unstage 'restore --staged --'- -- for file name give '' 
+**$ git unstage this.txt - for unstage 
+$ git st - unstaged file    
+**$ git config --global alias.last 'log -p -1' - SHORTCUT for last commit
+**$ git last - last commit shows here 
+*WE USED ALIAS WHEN WE ARE USING A COMMAND REGULAR IN GIT 
+
+<---------CREATING & SWITCHING BRANCHES---------->
+OPEN GITBASH IN FOLDER
+$ git status - modified this.txt
+**$ git restore this.txt - to discard changes 
+THIS COMMAND IS DANGEROUS SOMETIMES BECOZ WE LOST DATA 
+$ git status - clean 
+*NOW LETS BRANCH
+*SUPPOSEI I WANT TO CHANGE FEW THING IN FOLDER, FOR THAT I WILL MAKE NEW BRANCH NOT IN MASTER BRANCH
+**$ git checkout -b develop - -b means make branch and name develop and take inside it 
+*NOW I DELETED DIR FILES AND RENAME IT AS DIRECTORY 
+*NOW MAKING A NEW FOLDER TEMPLATE AND A GARBAGE FOLDER INSIDE IT ALL LOG FILES WILL COME 
+ALSO MAKE FOLDER IMPORTANT FILES INSIDE IT ADD EXCEL AND DB FILES
+AS DIRECTORY FOLDER IS EMPTY , IT IS GETTING IGNORE MAKE A TEXT FILE INSIDE IT 
+$ git status - modified so many things  
+$ git add . - staging
+$ git commit -m "Initial commit" - commit
+*SUPPOSE I GOT ORDER TO DELETE A LOG FILE IN MASTER I WILL CHANGE BRANCH 
+**$ git checkout master - WILL SHOW ALL FILES BUT GARBAGE FILE ALSO SHOWS BECOZ IT IS INSIDE GITIGNORE
+WILL DO ONE WORK REMOVE EVERYTHING FROM GITIGNORE
+NOW START FROM STARTING 
+$ rm -rf .git - remove git repository
+$ git init - making git repository
+$ git add . - staging
+$ git commit -m "Initial commit"- commiting
+$ git status - clean 
+NOW I CHANGED FIRST_RENAMED FILE 
+$ git status - modified
+$ git commit -a -m "changed first renamed" - direct commit 
+$ git status - clean 
+NOW CHANGING THIS.TXT AND WRITING THIS IS FROM MASTER
+$ git commit -a -m "Changed" - direct commit
+NOW I WILL CHANGE BRANCH AND MAKE NEW BRANCH 
+**$ git checkout -b develop -
+NOW I WILL DELETE FEW FILES LIKE DB ,EXCEL, FIRST_RENAMED,THIS
+$ git commit -a -m "chnaged" - commit
+$ git status - clean 
+NOW LETS CHANGE THE BRANCH 
+WE WILL SEE ALL DELETED FILES ARE SHOWING 
+**$ git checkout master - all delete files are shown here 
+**$ git checkout develop - inside develop branch 
+$ git branch - WILL SHOW ALL BRANCHES 
+* GREEN COLOR SHOWS THAT WE ARE ON THAT BRANCH
+$ git checkout master - return to master branch 
+
+<---------BRANCHING & MERGING--------->
+DOWNLOAD VS CODE 
+OPEN GIT BASH AND DELETE GIT REPOSITORY 
+$ git status - clean 
+$ rm -rf .git - delete
+$ git status - fatal not git repository
+CLOSE GIT BASH NOW 
+MAKE A NEW FOLDER MY WEBSITE 
+OPEN VS CODE IN NEW FOLDER
+OPEN TERMINAL & WE CAN RUN GIT COMMANDS 
+BUT IT IS BETTER TO USE GIT BASH 
+OPEN GIT BASH IN NEW FOLDER
+MAKE INDEX.HTML FILE in VS CODE INSIDE THE FOLDER AND USE BOILER PLATE
+NOW OPEN GETBOOSTRAP.COM AND COPY STARTER TEMPLATE 
+PASTE IT IN INDEX.HTML AND GO LIVE
+HELLO WORLD WILL BE DISPLAY
+NOW GO TO COMPONENTS INSIDE THAT  NAVBAR & COPY THE CODE AND PASTE IT IN INDEX.HTML 
+WE WILL SEE NAVBAR 
+NOW LETS MOVE TO GIT BASH WHICH IS OPEN 
+$ git status - not a repository
+$ git init -  make git repository
+$ git status - untrackedfiles
+$ git add . - staging
+$ git commit -m "Intial commit" -commit
+$ git status - clean 
+NOW SUPPOSE I MADE A CHANGES BUT I AM AFRAID TO MAKE IT BECOZ SUPPOSE THAT FILE IS IN PRODUCTION 
+SO I WILL MAKE A NEW BRANCH TO MAKE CHANGES 
+$ git checkout -b tryCleanup - inside new branch
+NOW WE CAN MAKE CHANGES IN FILE 
+$ git status - NOT staged
+$ git add . - staging
+$ git commit -m "broken features"- commit 
+NOW SUPPOSE OUR BOSS ASKED ABOUT WEBSITE THEN I WILL CHANGE MY BRANCH
+$ git checkout master - inside master branch
+NOW SUPPOSE WE HAD TOLD TO CHANGE LINK INTO ABOUT OPTION 
+WE CHANGE IT IN HTML FILE 
+$ git add . - staging   
+$ git commit -m "Added about "- commit
+$ git checkout tryCleanup - inide other branch 
+NOW SUPPOSE I MADE A FEW CHANGES THAT I LIKE AND SAVED IT 
+$ git add . - staging
+$ git commit -m "fixed the structure" - commit
+NOW MOVING INSIDE MASTER 
+$ git checkout master - inside master branch
+NOW SUPPOSE I TOLD THE BOSS I HAVE MADE FEW CHANGES CAN YOU SEE IT 
+$ git checkout tryCleanup - inside other branch
+BOSS SAID WOW NICE WORK 
+NOW MAKE FEW CHANGES AND MERGE IT TO MASTER 
+$ git commit -a -m "made changes to dropdown" - direct commit
+ONE IMP POINT WHEN YOU SWITCH THE BRANCH CHECK IT THAT YOU HAVE COMMITED THE LAST BRANCH BEFORE SWITCHING
+$ git checkout master - inside master branch
+$ git status - clean 
+**$ git merge tryCleanup - for MERGING
+**IT SAYS THAT THERE ARE SOME MERGE CONFLICTS , SO SELECT BETWEEN OPTION WHICH YOU HAVE TO CHOOSE IN HTML FILE 
+ACCEPTING THE INCOMING CHANGE
+$ git status - you have unmerged paths
+$ git add . - staging
+$ git commit - commiting
+**opens a vim editor in which me write commit messagewhich is default given 
+**NOW PRESS ESC AND CLICK :WQ ENTER
+**MERGE BRANCH tryCleanup
+NOW OUR MASTER BRANCH HAVE BEEN CHANGED 
+
+
+<-----------RESOLVING MERGECONFLICTS & BRANCH MANAGEMENT---------->
+OPEN GIT BASH IN OUR FOLDER
+$ git status - not a git repository
+$ git init - making git repository
+$ git status - untracked
+$ git add . - staging
+$ git commit -m "Initial commit" - commit
+NOW OPEN VS CODE IN FOLDER
+AND NOW MAKE INDEX.HTML FILE
+USE EMMET ABBRIEVATION AND GIVE TITLE AS "THIS IS MY INITIAL TITLE"
+$ git status - untracked file index.html
+$ git add . - now start tracking
+$ git commit -m "Added index.html"- commit
+$ git status - clean 
+**NOW WE HAVE DONE C0 COMMIT AND NOW WE DO OTHER COMMITS
+**CHANGING TITLE AS "THIS IS MY CHANGED TITLE 1"
+$ git status - modified
+$ git add . - staging
+**$ git commit -m "Added title 1" - commit
+**NOW DONE C1 COMMIT AND CHANGING TITLE AS "THIS IS MY CHANGED TITLE 2"
+$ git add . - staging
+**$ git commit -m "Added title 2" - commit
+$ git status - clean 
+**NOW DONE C2 COMMIT AND WE WILL CHANGED BRANCH 
+**$ git checkout -b issue1 - inside new branch
+**AND NOW CHANGING TITLE AS "THIS IS MY ISSUE1 TITLE 2 - C4"
+**$ git commit -a -m "This is C4" - Direct commit
+**NOW DONE C4 COMMIT
+**AND NOW CHANGING TITLE AS "THIS IS MY ISSUE1 TITLE 3 - C5"
+**$ git commit -a -m "This is C5" - Direct commit
+**NOW DONE C5 COMMIT
+**AND NOW CHANGING TITLE AS "THIS IS MY ISSUE1 TITLE 4 - C7"
+**$ git commit -a -m "This is C7" - Direct commit
+**CHECKING STATUS BEFORE CHANGING BRANCH 
+**VVIMP POINT OUR PREVIOUS BRANCH SHOULD BE CLEAN BEFORE CHANGING THE BRANCH
+$ git status - clean 
+$ git checkout master - inside master
+**NOW CHANGING TITLE AS "THIS IS MY CHANGED TITLE 3 - C6"
+**$ git commit -a -m "This is C6" - Direct commit
+**NOW I HAVE TO MERGE MY ISSUE1 BRANCH INTO MASTER 
+**$ git merge issue1 - merge failed due to merge CONFLICTS
+**IN VS CODE IT WILL SHOW C6 & C7 COMMIT TITLE AND GIVE OPTION TO CHOOSE ONE 
+**WE WILL CHOOSE INCOMING CHANGE C7 
+**WE CAN ALSO CHANGED MANUALLY 
+$ git status - unmerged paths 
+$ git add index.html - staging
+$ git status - conflicts have been fixed now commit it 
+$ git commit -m "Merged issue 1 " - commit
+$ git log - All commit are showing and also merge files 
+
+BRANCH MANAGEMENT COMMANDS
+**$ git branch - show master and issue 1 branch 
+**NOW MY MIND IS SAYING TO SOLVE ANOTHER ISSUE SO I WILL MAKE NEW BRANCH 
+**$ git checkout -b issue2 - inside issue2
+**NOW SUPPOSE I MADE CHANGES RAPIDLY AND DO SOMETHING WRONG 
+$ git add . - staging
+$ git commit -m "something wrong done"- commit 
+$ git checkout master - inside master
+$ git status - clean 
+$ git branch - will show new branch also 
+**$ git branch -v - branch name and hash and last commit will be shown 
+**$ git branch --merged - issue1 master
+**SHOWS MERGE FILES IN ABOVE COMMAND AND NOT MERGED FILES IN BELOW COMMAND
+**$ git branch --no-merged - issue2 
+**DELETING BRANHCHES 
+**$ git branch -d issue2 - error the branch is not fully merged 
+**$ git branch -d issue1 - Deleted branch issue 1 becoz it is merged 
+**$ git branch - not showing issue1 it has been deleted
+**$ git branch -D issue2 - Deleted issue2 D is capital 
+$ git branch - only master there 
+SO LIKE THIS WE CAN CREATE-MERGE AND DELETE BRANHCHES IN GIT FOR OUR PROJECT WORK 
+
+
+<---------BRANCHING WORKFLOW---------->
+**THERE ARE TWO TYPES OF BRANHCHES ARE AS FOLLOWS :
+**1-LONG RUNNING BRANHCHES -LIKE MASTER DEVELOP 
+**2-TOPIC BRANHCHES - SUPPOSE A IDEA CAME IN MIND SO WE WILL MAKE A BRANCH NAME LIKE REPLACE TEXT WITH TYPED JS -THIS BRANCH IS FOR TEMPORARY 
+
+**EXAMPLES -
+SUPPOSE A PROJECT MADE WITH C0 COMMIT FURTHER C1 COMMIT DONE IN MASTER BRANCH 
+AND A ISSUE CAME SO I WILL MAKE A ISSUE1 BRANCH WITH C2 COMMIT IN IT 
+AGAIN I CAME IN MASTER BRANCH WITH C3 COMMIT 
+THEN C4 ,C5, C6 IN ISSUE1 BRANCH 
+SUPPOSE IN C4 I GOT ISSUE SO I CHANGE BRANCH WITH C7,C8 ,C9 COMMMIT IN ISSUE 2 BRANCH
+AGAIN C9,C10 COMMIT IN MASTER BRANCH 
+SUPPOSE A IDEA CAME IN MIND AND MAKE A IDEA BRANCH WITH C12 C13 COMMIT 
+IF I WANT TO MERGE IT WITH ISSUE 2 THEN A C14 COMMIT IS MADE WITH C13 AND C11 COMMIT AND THIS IS MASTER BRANCH NOW 
+
+
+<---------PUSHING GIT BRANCHES TO REMOTE REPOSITORY---------->
+OPEN GIT BASH IN FOLDER
+$ git status - clean 
+$ git log - checking commits 
+$ git branch - master
+SUPPOSE I WANT TO ADD NEW FILES AND DELETE THE OLD FILES SO I WILL MAKE A NEW BRANCH
+$ git checkout -b bugfix - inside bugfix branch 
+$ git status- clean 
+$ git log - all commits 
+I WILL ADD CONTENT IN FILES AND DELETE EXCEL FILE 
+$ git status - modified
+$ git add . - staging
+$ git commit -m "fixed the bug" - commit 
+$ git status - clean 
+SUPPOSE I WANT TO SHOW THIS BRANCH TO MY BOSS 
+$ git checkout master - inside master
+$ git branch - will show * on master means inside that branch now 
+**$ git remote - to see remotes 
+**$ git remote -v - to check links
+**SO NOW INSIDE GITHUB WILL MAKE A NEW REPOSITORY AS DEMO REPOSITORY
+AND COPY A CODE FOR REMOTE 
+**$ git remote add origin "LINK" -  adding master 
+**$ git remote - origin showing
+**$ git remote -v - links for pull push 
+**$ git push -u origin master - for PUSHING
+**WILL ASK FOR PERMISSION OR USER ID AND PASSWORD FOR HTTPS LINK
+NOW IT HAS PUSH OUR FILES BUT BUT IT IS NOT SHOWING OUR OTHER BRANCHES BUGFIX 
+$ git branch - showing branches 
+$ git status - clean to check changes 
+**$ git checkout bugfix - inside bugfix 
+**$ git push origin bugfix - to push bugfix branch inside github  
+**NOW IN GITHUB IT IS SHOWING BUGFIX BRANCH ALSO SHOWING DIFFERENCE IN BRANCHES WITH USING COMPARE  TO CHECK 
+**VVIMP POINT TO PUSH A BRANCH YOU SHOULD BE INSIDE THAT BRANCH THEN PUSH IT 
+**BEFORE SWITCHING BRANCHES CHECK YOUR STATUS IS CLEAN  
+$ git status - clean 
+**$ git push origin bugfix:mybugfix - will make a mybugfix branch in remote showing 3 branches 
+**I WILL TELL GITHUB THAT BUGFIX BRANCH SHOULD BE TRACKED NOW BY MYBUGFIX BRANCH 
+**$ git branch - showing only 2 branch not to confused here 
+$ git checkout master - inside master 
+$ git branch -d bugfix - error warning not merged 
+**$ git merge bugfix - merged becoz no merge conflicts 
+$ git status - not push in master   
+**CAN I DELETE BUGFIX NOW ? 
+YES 
+**$ git branch -d bugfix - deleted 
+**$ git branch - only master branch there 
+$ git push origin master - to push in github 
+**NOW I WANT TO DELETE BRANCHES IN REMOTE SO WIL USE 
+**$ git push -d origin bugfix - deleted bugfix 
+AFTER REFRESH BUGFIX DELETED 
+**$ git push -d origin mybugfix -deleted bugfix 
+AFTER REFRESH MYBUGFIX ALSO DELETED 
+
+
+
