@@ -4,7 +4,7 @@ $ git status - clean
 $ git log - checking commits 
 $ git branch - master
 SUPPOSE I WANT TO ADD NEW FILES AND DELETE THE OLD FILES SO I WILL MAKE A NEW BRANCH
-$ git checkout -b bugfix - inside bugfix branch 
+**$ git checkout -b bugfix - inside bugfix branch 
 $ git status- clean 
 $ git log - all commits 
 I WILL ADD CONTENT IN FILES AND DELETE EXCEL FILE 
