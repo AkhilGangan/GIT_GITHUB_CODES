@@ -44,7 +44,7 @@ $ git status - not push in master
 YES 
 **$ git branch -d bugfix - deleted 
 **$ git branch - only master branch there 
-$ git push origin master - to push in github 
+**$ git push origin master - to push in github 
 **NOW I WANT TO DELETE BRANCHES IN REMOTE SO WIL USE 
 **$ git push -d origin bugfix - deleted bugfix 
 AFTER REFRESH BUGFIX DELETED 
